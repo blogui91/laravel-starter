@@ -153,7 +153,6 @@ class CRUDController extends Controller
 
         // Store the resource
         list($messages, $resource) = $this->repository->store($resource_id, $data);
-
         if ($messages->isEmpty()) {
             return $resource;
         }

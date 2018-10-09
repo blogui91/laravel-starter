@@ -52,7 +52,8 @@ class BaseRepository extends EloquentRepository implements BookRepositoryInterfa
         // Execution
 
         // Event being created
-        $model = $this->createModel()->fill($input)->save();
+        $model = $this->createModel();
+        $model->fill($input)->save();
 
         // Event created
         $this->resetScope();
