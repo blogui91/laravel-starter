@@ -8,6 +8,7 @@ use Spatie\SchemalessAttributes\SchemalessAttributes;
 
 class Book extends Model
 {
+    protected $fillable = ['title'];
     public $casts = [
         'extra_attributes' => 'array'
     ];
